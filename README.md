@@ -1,5 +1,6 @@
 # Spis treści
 
+- [Spis treści](#spis-treści)
 - [Opis](#opis)
 - [Część techniczna](#część-techniczna)
   - [Wymagania](#wymagania)
@@ -48,7 +49,7 @@ npm run test
 
 ## Store
 
-Moduł `store.ts` dostarcza proste rozwiązanie do zarządzania stanem aplikacji. Pozwala na utworzenie magazynu stanu, wysyłanie akcji oraz subskrypcję zmian stanu.
+`store.ts` dostarcza proste rozwiązanie do zarządzania stanem aplikacji w oparciu o popularne już istaniejące tego typu narzędzia, typu Redux czy Atom. Pozwala na utworzenie magazynu stanu, wysyłanie akcji oraz subskrypcję zmian stanu. Można go łatwo rozszerzyć dodając kolejne parametry do funkcji `createStore`, np `middleware`.
 
 ### Używanie
 
