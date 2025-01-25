@@ -7,7 +7,17 @@ type Reducer<State> = (state: State, action: Action) => State;
 
 type Listener = () => void;
 
-// Function to create a store with reducer and initial state
+/**
+ * Creates a store that holds the state tree.
+ * The only way to change the state inside it is to dispatch an action.
+ *
+ * @param reducer - A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ * @param initialState - The initial state of the store.
+ * @returns The newly created store.
+ *
+ * @example ```const store = createStore(counterReducer, 0);```
+ */
 export const createStore = <State extends {}>(reducer: Reducer<State>, initialState: State) => {
   let state: State = initialState;
   let listeners: Listener[] = [];
