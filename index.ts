@@ -5,12 +5,12 @@ enum CounterAction {
   decrement = 'DECREMENT'
 }
 
-const counterReducer = (state = 0, action: Action) => {
+export const counterReducer = (state = 0, action: Action) => {
   switch (action.type) {
     case CounterAction.increment:
-      return state + 1;
+      return state + (action.payload ?? 1);
     case CounterAction.decrement:
-      return state - 1;
+      return state - (action.payload ?? 1);
     default:
       return state;
   }
